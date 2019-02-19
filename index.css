@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+.whole {
+    display: grid;
+    grid-template-rows: 30% 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "left top right"
+        "left center right";
+}
+
+button{
+    width: 100%;
+    height: 30%;
+}
+
+.question{
+   text-align: center;
+}
+
+.counter{
+    text-align: center;
+}
+
+.sidebar-left{
+    grid-area: left;
+    background-color: grey;
+}
+.sidebar-right{
+    grid-area: right;
+    background-color: grey;
+}
+.top{
+    grid-area: top;
+    background-color: grey;
+}
+
+.leftBogImg{ 
+    width:100%;
+    grid-area: left;
+}
+
+.rightBogImg{
+    width: 100%;
+    grid-area: right;
+}
+
+.intro{
+    text-align: center;
+
+}
+
+.startButton{ 
+   
+   
+}
