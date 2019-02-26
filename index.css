@@ -1,58 +1,129 @@
 * {
     box-sizing: border-box;
+    font-family: VT323;
 }
 
-.whole {
-    display: grid;
-    grid-template-rows: 30% 1fr; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "left top right"
-        "left center right";
+@keyframes buttonGlow {
+0% {background: #00851d; }
+   100% {background: black;}
+  
+  }
+
+@media screen and (min-width: 500px){
+    .whole {
+        display: grid;
+        grid-template-rows: 30% 1fr; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "left top right"
+            "left center right";
+    }
+    .leftBogImg{ 
+        width:100%;
+        grid-area: left;
+    }
+    
+    .rightBogImg{
+        width: 100%;
+        grid-area: right;
+    }
+    
+    }
+@media screen and (max-width: 500px){
+
+    .whole {
+        display: grid;
+        grid-template-rows: 20% 1fr; 
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-areas: 
+            "left top right"
+            "left center right";
+            background-image: url("./assets/bog_splash.png");
+            -webkit-background-size: cover;
+            -moz-background-size: center cover;
+            background-size: cover;
+            background-position: center top;
+           
+        }
+            
+    
+
+    .rightBogImg{ 
+       display: none;
+    }
+    .leftBogImg{display: none;
+    }
+
+    .intro{font-size: 20px;}
+    .answerResponse, .question{ background-image:  linear-gradient(black 2%,  #00851d 10%, black 2%);
+
+    }
 }
 
-button{
+
+
+body{
+    background-image: linear-gradient(black 2%,  #00851d 50%, black 100%);
+}
+
+
+main {
+    color: #00851d;
+    text-shadow: 1px 0px 4px black;
+    font-size: 1.1em;
+}
+
+fieldset{
+    background-image:  linear-gradient(black 2%,  #00851d 50%);
+}
+
+button{font-size: 2em;
+    box-shadow: 1px 1px black;
     width: 100%;
     height: 30%;
+    color: #00851d;
+    animation-name: buttonGlow;
+    animation-duration: 2.5s;
+    background: black;
+    
 }
 
-.question{
-   text-align: center;
+h1{
+    margin: 0;
 }
+h2 {
+    text-align: center;
+ }
+
+ .whole{
+    height: 100%;
+}
+
+.intro {
+   
+    text-align: center;
+}
+
 
 .counter{
     text-align: center;
 }
 
 .sidebar-left{
+   
     grid-area: left;
-    background-color: grey;
+    
 }
 .sidebar-right{
+   
     grid-area: right;
-    background-color: grey;
+    
 }
 .top{
     grid-area: top;
-    background-color: grey;
+    text-shadow: 1px 1px 10px black;
+    color: #00851d;
+    background: linear-gradient( #00851d -90%, black 100%);
+    box-shadow: 1px 1px 10px black;
 }
 
-.leftBogImg{ 
-    width:100%;
-    grid-area: left;
-}
-
-.rightBogImg{
-    width: 100%;
-    grid-area: right;
-}
-
-.intro{
-    text-align: center;
-
-}
-
-.startButton{ 
-   
-   
-}

@@ -27,7 +27,7 @@ const STORE = [
       },
 
      {
-         question:  "Dr. Bogdanoff & Dr. Bogdanoff are most renown in the scientific community for their accomplishments in...",
+         question:  "Dr. Bogdanoff & Dr. Bogdanoff are most renown for ...",
         answers: ["Publishing nonsensical theories",
             "Disproving the Theory of Relativity",
             "Zoology",
@@ -51,7 +51,7 @@ const STORE = [
         answers: [ "Acromegaly",
             "Telepathy",
             "Greed",
-            "Vainity",
+            "Vanity",
         ],
         correctAnswer:"Acromegaly" ,
         },
@@ -94,4 +94,5 @@ const STORE = [
         ],
         correctAnswer:"may may" ,
         }
+      
     ]

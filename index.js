@@ -91,8 +91,11 @@ function startOnClick () { currentCorrect = 0;
   });
   }
 
+
+  
 function checkAnswer() {
   $(".js-target").on("click", "#checkCorrect", function (event) {
+    
       if ($("input:checked").val() === `${STORE[currentQuestion].correctAnswer}`)
       { $('.js-target').html(correctAnswerPage());
     tallyCorrect();}
@@ -106,8 +109,12 @@ function checkAnswer() {
 
   function cyclePages () {
     $('.js-target').on('click', '#js-nextQ', function (event) {
-if (currentQuestion < 10){
+if (currentQuestion < 9){
       $('.js-target').html(createQuestion());
+}
+else if (currentQuestion == 9){
+  $('.js-target').html(retryPage());
+
 }
 else {$('.js-target').html(retryPage());}
   });
