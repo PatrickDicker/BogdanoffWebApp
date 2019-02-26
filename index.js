@@ -44,7 +44,7 @@ function  wrongAnswerPage () { return `
     <h1 class="counter" role="heading">WRONG ANSWER</h1>
   </header>
   <main role="main">
-    <h2 class="answerResponse">That was a terrible guess</h2>
+    <h2 class="answerResponse">That was a terrible guess... The correct answer was \"${STORE[currentQuestion].correctAnswer}\" </h2>
     <button type="button" id="js-nextQ" class="nextButton">Keep On Boggin</button>
   </main>
 `;}
