@@ -99,10 +99,15 @@ function checkAnswer() {
       if ($("input:checked").val() === `${STORE[currentQuestion].correctAnswer}`)
       { $('.js-target').html(correctAnswerPage());
     tallyCorrect();}
+    else if 
+        ($("input:checked").val() == undefined) 
+    {
+      console.log("blank submitted");
+      alert("please select your answer");
+    }
     else{
       $('.js-target').html(wrongAnswerPage());
     }
-      
 
   }); 
 }
