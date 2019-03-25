@@ -95,7 +95,7 @@ function startOnClick () { currentCorrect = 0;
   
 function checkAnswer() {
   $(".js-target").on("click", "#checkCorrect", function (event) {
-    
+    event.preventDefault();
       if ($("input:checked").val() === `${STORE[currentQuestion].correctAnswer}`)
       { $('.js-target').html(correctAnswerPage());
     tallyCorrect();}
